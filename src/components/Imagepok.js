@@ -11,7 +11,7 @@ import pokemon8 from './../assets/images/pokemon8.png';
 import pokemon9 from './../assets/images/pokemon9.png';
 import pokemon10 from './../assets/images/pokemon10.png';
 
-function Pokemon() {
+function Imagepok() {
     return (
         <div class='depart'>
            <div class="image">
@@ -128,4 +128,4 @@ function Pokemon() {
     )
 }
 
-export default Pokemon
+export default Imagepok

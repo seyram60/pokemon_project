@@ -37,10 +37,96 @@
   }
 }
 
-.image-section{
-  width: 90%;
-  height: 70%;
+.hero .image-section{
+  width: 100%;
+  height: auto;
 }
-p {
-  size: 15px;
+
+.hero .image-section img{
+  width: 90%;
+  height: 270px; 
+  /* i used 270px because my images have different size so it's not graphiquely nice for the user when using 70%. 
+  but the better option is to take it in percent to be effective the ap being responsive */
+  border: 1 solid #eee;
+  display: block;
+}
+/* */
+.hero .caption {
+  /*width: 100%;
+  height: 100%;*/
+  position: absolute;
+  padding: 15px;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  background-color: antiquewhite;
+  color: #222;
+  opacity: 0;
+  transition: opacity 0.30s;
+  transition: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+
+.hero .caption:hover{
+  opacity: 1;
+}
+
+.depart {
+  display: grid;
+  grid-template-columns: auto auto auto ;
+}
+
+.image {
+  position: relative;
+  width: 400px;
+}
+
+.image-img {
+  display: block;
+  width: 100%;
+  height: 270px;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.image-overlay:hover {
+  opacity: 1;
+}
+
+.image-overlay > * {
+  transform: translateY(20px);
+  transition: transform 0.25s;
+}
+
+.image-overlay:hover > * {
+  transform: translateY(0);
+}
+
+.image-title {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.image-desc {
+  font-size: 1.25rem;
+  margin-top: 0.25em;
 }
